@@ -1,1 +1,1 @@
-# Course-final-project
+The ending project for java courses.
