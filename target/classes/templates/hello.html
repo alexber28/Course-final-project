@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Site</title>
+    <link type = "text/css" rel = "stylesheet" href = "style.css">
+    <link type = "text/css" rel = "stylesheet" href = "style2.css">
+</head>
+<body>
+
+<nav class="top-menu">
+    <ul class="menu-main">
+        <li class="right-item"><a class="link" href="userInfo">Авторизация / Регистрация</a></li>
+        <!--<li class="right-item"><a href="">About</a></li>-->
+    </ul>
+    <a class="navbar-logo" href=""><img src="https://html5book.ru/wp-content/uploads/2017/04/lily-logo.png"></a>
+</nav>
+<h1 th:text="${ans}"></h1>
+<div class="post-wrap">
+    <div class="post-item">
+        <div class="item-content">
+            <div class="item-icon group"></div>
+            <div class="item-body">
+                <h3>Главная / Бронирование отеля</h3>
+                <p>Забронируйте свой отдых здесь и сейчас!</p>
+            </div>
+            <div class="item-footer">
+                <a href="admin" class="link"><span>Подробнее</span></a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="post-item">
+        <div class="item-content">
+            <div class="item-icon tree"></div>
+            <div class="item-body">
+                <h3>Сувенирный магазин</h3>
+                <p>Здесь Вы можете купить все для комфортного отдыха</p>
+            </div>
+            <div class="item-footer">
+                <a class="link" href="shop" ><span>Подробнее</span></a>
+            </div>
+        </div>
+    </div>
+
+    <!--
+    <div class="post-item">
+        <div class="item-content">
+            <div class="item-icon anchor"></div>
+            <div class="item-body">
+                <h3>Ресторан</h3>
+                <p>Заказывайте блюда не выходя из вашего номера!</p>
+            </div>
+            <div class="item-footer">
+                <a href="#" class="link"><span>Подробнее</span></a>
+            </div>
+        </div>
+    </div>
+    -->
+
+    <div class="post-item">
+        <div class="item-content">
+            <div class="item-icon video"></div>
+            <div class="item-body">
+                <h3>Погода</h3>
+                <p>Прогноз погоды нашего города!</p>
+            </div>
+            <div class="item-footer">
+                <a class="link" href="weather"><span>Подробнее</span></a>
+            </div>
+        </div>
+    </div>
+
+    <!--
+    <div class="post-item">
+        <div class="item-content">
+            <div class="item-icon video"></div>
+            <div class="item-body">
+                <h3>Личный кабинет</h3>
+                <p>Информация о вашем проживании!</p>
+            </div>
+            <div class="item-footer">
+                <a class="link" href="#"><span>Подробнее</span></a>
+            </div>
+        </div>
+    </div>
+    -->
+</div>
+</body>
+</html>

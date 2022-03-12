@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather</title>
+    <link type = "text/css" rel = "stylesheet" href = "styleWeather.css">
+    <link type = "text/css" rel = "stylesheet" href = "style.css">
+    <link type = "text/css" rel = "stylesheet" href = "style2.css">
+
+</head>
+<body>
+<nav class="top-menu">
+    <ul class="menu-main">
+        <li class="right-item"><a class="link" href="hello">Вернуться назад</a></li>
+    </ul>
+    <a class="navbar-logo" href=""><img src="https://html5book.ru/wp-content/uploads/2017/04/lily-logo.png"></a>
+</nav>
+<!--<a class="button" href="hello" >Вернуться назад</a> -->
+<div class="weather-short">
+    <div class="dates short-d">
+        <span th:text="${days[0].date}"></span>
+    </div>
+    <table class="weather-today short">
+        <tbody>
+        <tr class="night">
+            <td class="weather-day" th:text="${days[0].weatherDay}"></td>
+            <td class="weather-temperature" th:text="${days[0].kindOfWth}"><img class="tooltip" src="http://static.world-weather.info/images/icon-weather/48x48/n400.png" alt="Облачно" title="Облачно"><span></span></td>
+            <td class="weather-probability" th:text="${days[0].temperature}"></td>
+            <td class="weather-pressure" th:text="${days[0].pressure}"></td>
+            <td class="weather-wind" th:text="${days[0].wind}"></td>
+            <td class="weather-humidity" th:text="${days[0].kindOfWind}"></td>
+            <td class="weather-humidity" th:text="${days[0].humidity}"></td>
+        </tr>
+        <tr class="morning">
+            <td class="weather-day" th:text="${days[1].weatherDay}"></td>
+            <td class="weather-temperature" th:text="${days[1].kindOfWth}"><img class="tooltip" src="http://static.world-weather.info/images/icon-weather/48x48/n400.png" alt="Облачно" title="Облачно"><span></span></td>
+            <td class="weather-probability" th:text="${days[1].temperature}"></td>
+            <td class="weather-pressure" th:text="${days[1].pressure}"></td>
+            <td class="weather-wind" th:text="${days[1].wind}"></td>
+            <td class="weather-humidity" th:text="${days[1].kindOfWind}"></td>
+            <td class="weather-humidity" th:text="${days[1].humidity}"></td>
+        </tr>
+        <tr class="day">
+            <td class="weather-day" th:text="${days[2].weatherDay}"></td>
+            <td class="weather-temperature" th:text="${days[2].kindOfWth}"><img class="tooltip" src="http://static.world-weather.info/images/icon-weather/48x48/n400.png" alt="Облачно" title="Облачно"><span></span></td>
+            <td class="weather-probability" th:text="${days[2].temperature}"></td>
+            <td class="weather-pressure" th:text="${days[2].pressure}"></td>
+            <td class="weather-wind" th:text="${days[2].wind}"></td>
+            <td class="weather-humidity" th:text="${days[2].kindOfWind}"></td>
+            <td class="weather-humidity" th:text="${days[2].humidity}"></td>
+        </tr>
+        <tr class="evening">
+            <td class="weather-day" th:text="${days[3].weatherDay}"></td>
+            <td class="weather-temperature" th:text="${days[3].kindOfWth}"><img class="tooltip" src="http://static.world-weather.info/images/icon-weather/48x48/n400.png" alt="Облачно" title="Облачно"><span></span></td>
+            <td class="weather-probability" th:text="${days[3].temperature}"></td>
+            <td class="weather-pressure" th:text="${days[3].pressure}"></td>
+            <td class="weather-wind" th:text="${days[3].wind}"></td>
+            <td class="weather-humidity" th:text="${days[3].kindOfWind}"></td>
+            <td class="weather-humidity" th:text="${days[3].humidity}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="weather-short">
+    <div class="dates short-d">
+        <span th:text="${days[4].date}"></span>
+    </div>
+    <table class="weather-today short">
+        <tbody>
+        <tr class="night">
+            <td class="weather-day" th:text="${days[4].weatherDay}"></td>
+            <td class="weather-temperature" th:text="${days[4].kindOfWth}"><img class="tooltip" src="http://static.world-weather.info/images/icon-weather/48x48/n400.png" alt="Облачно" title="Облачно"><span></span></td>
+            <td class="weather-probability" th:text="${days[4].temperature}"></td>
+            <td class="weather-pressure" th:text="${days[4].pressure}"></td>
+            <td class="weather-wind" th:text="${days[4].wind}"></td>
+            <td class="weather-humidity" th:text="${days[4].kindOfWind}"></td>
+            <td class="weather-humidity" th:text="${days[4].humidity}"></td>
+        </tr>
+        <tr class="morning">
+            <td class="weather-day" th:text="${days[5].weatherDay}"></td>
+            <td class="weather-temperature" th:text="${days[5].kindOfWth}"><img class="tooltip" src="http://static.world-weather.info/images/icon-weather/48x48/n400.png" alt="Облачно" title="Облачно"><span></span></td>
+            <td class="weather-probability" th:text="${days[5].temperature}"></td>
+            <td class="weather-pressure" th:text="${days[5].pressure}"></td>
+            <td class="weather-wind" th:text="${days[5].wind}"></td>
+            <td class="weather-humidity" th:text="${days[5].kindOfWind}"></td>
+            <td class="weather-humidity" th:text="${days[5].humidity}"></td>
+        </tr>
+        <tr class="day">
+            <td class="weather-day" th:text="${days[6].weatherDay}"></td>
+            <td class="weather-temperature" th:text="${days[6].kindOfWth}"><img class="tooltip" src="http://static.world-weather.info/images/icon-weather/48x48/n400.png" alt="Облачно" title="Облачно"><span></span></td>
+            <td class="weather-probability" th:text="${days[6].temperature}"></td>
+            <td class="weather-pressure" th:text="${days[6].pressure}"></td>
+            <td class="weather-wind" th:text="${days[6].wind}"></td>
+            <td class="weather-humidity" th:text="${days[6].kindOfWind}"></td>
+            <td class="weather-humidity" th:text="${days[6].humidity}"></td>
+        </tr>
+        <tr class="evening">
+            <td class="weather-day" th:text="${days[7].weatherDay}"></td>
+            <td class="weather-temperature" th:text="${days[7].kindOfWth}"><img class="tooltip" src="http://static.world-weather.info/images/icon-weather/48x48/n400.png" alt="Облачно" title="Облачно"><span></span></td>
+            <td class="weather-probability" th:text="${days[7].temperature}"></td>
+            <td class="weather-pressure" th:text="${days[7].pressure}"></td>
+            <td class="weather-wind" th:text="${days[7].wind}"></td>
+            <td class="weather-humidity" th:text="${days[7].kindOfWind}"></td>
+            <td class="weather-humidity" th:text="${days[7].humidity}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="weather-short">
+    <div class="dates short-d red">
+        <span th:text="${days[8].date}"></span>
+    </div>
+    <table class="weather-today short">
+        <tbody>
+        <tr class="night">
+            <td class="weather-day" th:text="${days[8].weatherDay}"></td>
+            <td class="weather-temperature" th:text="${days[8].kindOfWth}"><img class="tooltip" src="http://static.world-weather.info/images/icon-weather/48x48/n400.png" alt="Облачно" title="Облачно"><span></span></td>
+            <td class="weather-probability" th:text="${days[8].temperature}"></td>
+            <td class="weather-pressure" th:text="${days[8].pressure}"></td>
+            <td class="weather-wind" th:text="${days[8].wind}"></td>
+            <td class="weather-humidity" th:text="${days[8].kindOfWind}"></td>
+            <td class="weather-humidity" th:text="${days[8].humidity}"></td>
+        </tr>
+        <tr class="morning">
+            <td class="weather-day" th:text="${days[9].weatherDay}"></td>
+            <td class="weather-temperature" th:text="${days[9].kindOfWth}"><img class="tooltip" src="http://static.world-weather.info/images/icon-weather/48x48/n400.png" alt="Облачно" title="Облачно"><span></span></td>
+            <td class="weather-probability" th:text="${days[9].temperature}"></td>
+            <td class="weather-pressure" th:text="${days[9].pressure}"></td>
+            <td class="weather-wind" th:text="${days[9].wind}"></td>
+            <td class="weather-humidity" th:text="${days[9].kindOfWind}"></td>
+            <td class="weather-humidity" th:text="${days[9].humidity}"></td>
+        </tr>
+        <tr class="day">
+            <td class="weather-day" th:text="${days[10].weatherDay}"></td>
+            <td class="weather-temperature" th:text="${days[10].kindOfWth}"><img class="tooltip" src="http://static.world-weather.info/images/icon-weather/48x48/n400.png" alt="Облачно" title="Облачно"><span></span></td>
+            <td class="weather-probability" th:text="${days[10].temperature}"></td>
+            <td class="weather-pressure" th:text="${days[10].pressure}"></td>
+            <td class="weather-wind" th:text="${days[10].wind}"></td>
+            <td class="weather-humidity" th:text="${days[10].kindOfWind}"></td>
+            <td class="weather-humidity" th:text="${days[10].humidity}"></td>
+        </tr>
+        <tr class="evening">
+            <td class="weather-day" th:text="${days[11].weatherDay}"></td>
+            <td class="weather-temperature" th:text="${days[11].kindOfWth}"><img class="tooltip" src="http://static.world-weather.info/images/icon-weather/48x48/n400.png" alt="Облачно" title="Облачно"><span></span></td>
+            <td class="weather-probability" th:text="${days[11].temperature}"></td>
+            <td class="weather-pressure" th:text="${days[11].pressure}"></td>
+            <td class="weather-wind" th:text="${days[11].wind}"></td>
+            <td class="weather-humidity" th:text="${days[11].kindOfWind}"></td>
+            <td class="weather-humidity" th:text="${days[11].humidity}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

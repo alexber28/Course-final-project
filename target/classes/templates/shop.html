@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Shop</title>
+  <link type = "text/css" rel = "stylesheet" href = "style5.css">
+  <link type = "text/css" rel = "stylesheet" href = "style.css">
+  <link type = "text/css" rel = "stylesheet" href = "style2.css">
+  <link type = "text/css" rel = "stylesheet" href = "styleShop.css">
+</head>
+<body>
+<nav class="top-menu">
+  <ul class="menu-main">
+    <li class="right-item"><a class="link" href="hello">Вернуться назад</a></li>
+    <li class="right-item"><a class="link" href="basket">Корзина</a></li>
+  </ul>
+  <a class="navbar-logo" href=""><img src="https://html5book.ru/wp-content/uploads/2017/04/lily-logo.png"></a>
+</nav>
+<!--<a class="button" href="hello" ><span>Вернуться назад</span></a>
+<a href="basket" class="button">Корзина</a> -->
+<h2 th:text="'В корзине '+${count_basket}+' товаров'"></h2>
+<h2 th:text="'У вас на счету '+${userMoney}+'$'"></h2>
+<table>
+  <tr>
+    <td th:each="item: ${items}">
+      <div class="product-item">
+        <img th:src="${item.url}">
+        <div class="product-list">
+          <h3 th:text="${item.name}">Маленькое черное платье</h3>
+          <span class="price" th:text="'₽ ' +${item.price}">₽ 1999</span>
+          <h4 th:text="'Количество товара на складе: '+${item.number}">Маленькое черное платье</h4>
+          <a th:href="'/shop?id='+${item.id}" href="" class="button">В корзину</a>
+        </div>
+      </div>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

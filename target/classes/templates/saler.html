@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop for saler</title>
+    <link type = "text/css" rel = "stylesheet" href = "style2.css">
+    <link type = "text/css" rel = "stylesheet" href = "style.css">
+    <link type = "text/css" rel = "stylesheet" href = "style5.css">
+    <link type = "text/css" rel = "stylesheet" href = "style4.css">
+    <link type = "text/css" rel = "stylesheet" href = "styleTest.css">
+</head>
+<body>
+<nav class="top-menu">
+    <ul class="menu-main">
+        <li class="right-item"><a class="link" href="hello">Вернуться назад</a></li>
+        <li class="right-item"><a class="link" href="shopSaler">Просмотр магазина</a></li>
+    </ul>
+    <a class="navbar-logo" href=""><img src="https://html5book.ru/wp-content/uploads/2017/04/lily-logo.png"></a>
+</nav>
+<!--
+<a class="button" href="hello" ><span>Вернуться назад</span></a>
+<a class="button" href="shopSaler" ><span>Просмотр магазина</span></a> -->
+<h3>Добавление товара</h3>
+<form action="/addItem" method="get">
+    <div class="catagory_area">
+        <div class="container">
+            <div class="row cat_search">
+                <div class="col-lg-3 col-md-4">
+                    <div class="single_input">
+                        <input type="text" placeholder="Enter name" name="nameEnter">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <div class="single_input">
+                        <input type="text" placeholder="Enter price" name="priceEnter">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <div class="single_input">
+                        <input type="text" placeholder="Enter url" name="urlEnter">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <div class="single_input">
+                        <input type="text" placeholder="Enter number" name="numberEnter">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-12">
+                    <div class="job_btn">
+                        <input type="submit" class="button" value="Добавить">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h3 th:text="${answerAdding}"></h3>
+</form>
+<h3>Удаление товара</h3>
+<form action="/deleteItem" method="get">
+    <div class="catagory_area">
+        <div class="container">
+            <div class="row cat_search">
+                <div class="col-lg-3 col-md-4">
+                    <div class="single_input">
+                        <input type="text" placeholder="Enter name" name="nameEnter">
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-12">
+                    <div class="job_btn">
+                        <input type="submit" class="button" value="Удалить">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h3 th:text="${answerDeleting}"></h3>
+</form>
+</body>
+</html>

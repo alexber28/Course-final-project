@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Hello</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link type = "text/css" rel = "stylesheet" href = "style5.css">
+  <link type = "text/css" rel = "stylesheet" href = "style.css">
+  <link type = "text/css" rel = "stylesheet" href = "style2.css">
+  <link type = "text/css" rel = "stylesheet" href = "styleShop.css">
+</head>
+<body>
+<nav class="top-menu">
+  <ul class="menu-main">
+    <li class="right-item"><a class="link" href="shop">Вернуться назад</a></li>
+  </ul>
+  <a class="navbar-logo" href=""><img src="https://html5book.ru/wp-content/uploads/2017/04/lily-logo.png"></a>
+</nav>
+
+<!--<a class="link" href="shop" ><span>Вернуться назад</span></a> -->
+<h3 th:text="${infoAnswer}"></h3>
+<table>
+  <tr>
+    <td th:each="item: ${items}">
+      <div class="product-item">
+        <img th:src="${item.url}">
+        <div class="product-list">
+          <h3 th:text="${item.name}">Маленькое черное платье</h3>
+          <span class="price" th:text="'₽ ' +${item.price}">₽ 1999</span>
+          <a th:href="'/buy?id='+${item.id}" href="" class="button">Купить</a>
+          <a th:href="'/remove?id='+${item.id}" href="" class="button">Удалить</a>
+        </div>
+      </div>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

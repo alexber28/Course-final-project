@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Users</title>
+  <link type = "text/css" rel = "stylesheet" href = "style2.css">
+  <link type = "text/css" rel = "stylesheet" href = "style.css">
+  <link type = "text/css" rel = "stylesheet" href = "style5.css">
+  <link type = "text/css" rel = "stylesheet" href = "style4.css">
+  <link type = "text/css" rel = "stylesheet" href = "styleTest.css">
+</head>
+<body>
+<nav class="top-menu">
+  <ul class="menu-main">
+    <li class="right-item"><a class="link" href="hello">Вернуться назад</a></li>
+  </ul>
+  <a class="navbar-logo" href=""><img src="https://html5book.ru/wp-content/uploads/2017/04/lily-logo.png"></a>
+</nav>
+<h1>Регистрация</h1>
+<form action="/userRegister" method="get">
+  <div class="catagory_area">
+    <div class="container">
+      <div class="row cat_search">
+
+        <div class="col-lg-3 col-md-4">
+          <div class="single_input">
+            <input type="text" placeholder="Enter name" name="name">
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <div class="single_input">
+            <input type="text" placeholder="Enter surname" name="surname">
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <div class="single_input">
+            <input type="text" placeholder="Enter password" name="password">
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <div class="single_input">
+            <select class="wide" name="role">
+              <option data-display="role">Роль</option>
+              <option value="1">Отдыхающий</option>
+              <!--
+              <option value="2">Продавец</option>
+              <option value="3">Администатор по брони</option>
+              <option value="4">Повар</option>
+              -->
+            </select>
+          </div>
+
+        </div>
+        <!--
+        <div class="col-lg-3 col-md-4">
+          <div class="single_input">
+            <input type="text" placeholder="Enter money" name="money">
+          </div>
+        </div> -->
+        <div class="col-lg-3 col-md-12">
+          <div class="job_btn">
+            <input type="submit" class="button" value="Зарегистрироваться">
+          </div>
+        </div>
+      </div>
+      <!--
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="popular_search d-flex align-items-center">
+            <span>Popular Search:</span>
+            <ul>
+              <li><a href="/userRegist?keyword=&location=0&category=2">Отправить</a></li>
+              <li><a href="#">Marketing</a></li>
+              <li><a href="#">Administration</a></li>
+              <li><a href="#">Teaching & Education</a></li>
+              <li><a href="#">Engineering</a></li>
+              <li><a href="#">Software & Web</a></li>
+              <li><a href="#">Telemarketing</a></li>
+            </ul>
+          </div>
+        </div>
+         -->
+    </div>
+  </div>
+  </div>
+</form>
+<h2>Вход</h2>
+<form action="/userEnter" method="get">
+  <div class="catagory_area">
+    <div class="container">
+      <div class="row cat_search">
+        <div class="col-lg-3 col-md-4">
+          <div class="single_input">
+            <input type="text" placeholder="Enter name" name="nameEnter">
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <div class="single_input">
+            <input type="text" placeholder="Enter password" name="passwordEnter">
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-12">
+          <div class="job_btn">
+            <input type="submit" class="button" value="Войти">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+<h3 th:text="${greeting}"></h3>
+</body>
+</html>

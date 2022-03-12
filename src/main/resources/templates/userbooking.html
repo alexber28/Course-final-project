@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Administration</title>
+  <link type = "text/css" rel = "stylesheet" href = "style2.css">
+  <link type = "text/css" rel = "stylesheet" href = "style.css">
+  <link type = "text/css" rel = "stylesheet" href = "style5.css">
+  <link type = "text/css" rel = "stylesheet" href = "style4.css">
+  <link type = "text/css" rel = "stylesheet" href = "styleTest.css">
+</head>
+<body>
+ <!--<a class="button" href="hello" ><span>Вернуться назад</span></a> -->
+<nav class="top-menu">
+  <ul class="menu-main">
+    <li class="right-item"><a class="link" href="hello">Вернуться назад</a></li>
+  </ul>
+  <a class="navbar-logo" href=""><img src="https://html5book.ru/wp-content/uploads/2017/04/lily-logo.png"></a>
+</nav>
+<h3>Бронирование номера онлайн</h3>
+<form action="/bookRoom" method="get">
+  <div class="catagory_area">
+    <div class="container">
+      <div class="row cat_search">
+        <div class="col-lg-3 col-md-4">
+          <div class="single_input">
+            <input type="text" placeholder="Enter name" name="nameEnter">
+          </div>
+        </div>
+        <!--
+        <div class="col-lg-3 col-md-4">
+          <div class="single_input">
+            <input type="text" placeholder="Enter password" name="passwordEnter">
+          </div>
+        </div>
+        -->
+        <div class="col-lg-3 col-md-4">
+          <div class="single_input">
+            <input type="text" placeholder="Enter days" name="roomDays">
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <div class="single_input">
+            <select class="wide" name="role">
+              <option data-display="role">Комфорт</option>
+              <option value="1">Стандарт</option>
+              <option value="2">Люкс</option>
+              <option value="3">Пентхаус</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-12">
+          <div class="job_btn">
+            <input type="submit" class="button" value="Забронировать">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h3 th:text="${answerBookOnline}"></h3>
+</form>
+
+</body>
+</html>
